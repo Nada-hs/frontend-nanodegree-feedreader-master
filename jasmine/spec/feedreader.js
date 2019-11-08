@@ -70,13 +70,14 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-         it('Toggle when menu icon clicked',function(){
-            let menuIcon = document.querySelector('a.menu-icon-link');
-            menuIcon.click();
-            expect(document.body.classList.contains('menu-hidden')).toBe(false);
-            menuIcon.click();
-            expect(document.body.classList.contains('menu-hidden')).toBe(true);
+      it('disappears when clicked', function() {
+            $('.menu-icon-link').trigger('click');
+            expect($('.menu-hidden').is(':visible')).toBe(false);
+        })
 
+        it('appears when clicked', function() {
+            $('.menu-icon-link').trigger('click');
+            expect($('.menu-hidden').is(':visible')).toBe(true);
         });
     });
   
