@@ -74,9 +74,9 @@ $(function() {
     
             it('Toggle when menu icon clicked',function(){
             $('a.menu-icon-link').trigger('click'); // show menu
-            expect($('body').hasClass('menu-hidden')).toBe(false);
-            $('a.menu-icon-link').trigger('click'); // hide menu again
             expect($('body').hasClass('menu-hidden')).toBe(true);
+            $('a.menu-icon-link').trigger('click'); // hide menu again
+            expect($('body').hasClass('menu-hidden')).toBe(false);
 
         });
 
