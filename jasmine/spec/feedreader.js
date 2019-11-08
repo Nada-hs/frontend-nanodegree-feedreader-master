@@ -73,9 +73,12 @@ $(function() {
          it('Toggle when menu icon clicked',function(){
             let menuIcon = document.querySelector('a.menu-icon-link');
             menuIcon.click();
-            expect(document.body.classList.contains('menu-hidden')).toBe(false);
+            expect('body').not.toHaveClass('menu-hidden');
+           // expect(document.body.classList.contains('menu-hidden')).toBe(false);
             menuIcon.click();
-            expect(document.body.classList.contains('menu-hidden')).toBe(true);
+            expect('body').toHaveClass('menu-hidden');
+
+          //  expect(document.body.classList.contains('menu-hidden')).toBe(true);
 
         });
 
