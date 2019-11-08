@@ -8,7 +8,8 @@ This is a Udacity Feed reader test project. Its to learn how to use Jasmine to w
 ## Getting started
 
 Download this repo and open.
-Or, checkout Live version here
+
+Or, checkout Live version here 
 
 ## Concepts
 
