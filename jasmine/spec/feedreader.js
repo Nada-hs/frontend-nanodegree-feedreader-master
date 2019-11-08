@@ -71,7 +71,7 @@ $(function() {
           */
 
          it('Toggle when menu icon clicked',function(){
- HEAD
+
              
             let menuIcon = document.querySelector('a.menu-icon-link');
 
