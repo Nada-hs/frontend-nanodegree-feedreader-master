@@ -70,7 +70,6 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
-    
          it('Toggle when menu icon clicked',function(){
 
 
@@ -145,3 +144,4 @@ it('Entry elment in the feed container',function(){
 });
 
 }());
+
