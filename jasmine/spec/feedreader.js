@@ -71,12 +71,29 @@ $(function() {
           */
 
          it('Toggle when menu icon clicked',function(){
+<<<<<<< HEAD
              
             let menuIcon = document.querySelector('a.menu-icon-link');
+=======
+
+
+
+    
+                $('.menu-icon-link').trigger('click');
+                expect($('.menu-hidden').is(':visible')).toBe(false);
+          
+    
+          
+                $('.menu-icon-link').trigger('click');
+                expect($('.menu-hidden').is(':visible')).toBe(true);
+        
+
+          /*  let menuIcon = document.querySelector('a.menu-icon-link');
+>>>>>>> 95700197d620952ec6f2edb905a04d138a3cdf8c
             menuIcon.click();
             expect(document.body.classList.contains('menu-hidden')).toBe(false);
             menuIcon.click();
-            expect(document.body.classList.contains('menu-hidden')).toBe(true);
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);*/
 
         });
 
@@ -137,3 +154,4 @@ it('Entry elment in the feed container',function(done){
 });
 
 }());
+
