@@ -71,13 +71,18 @@ $(function() {
           */
 
          it('Toggle when menu icon clicked',function(){
-            let menuIcon = document.querySelector('a.menu-icon-link');
-            menuIcon.click();
-            expect(document.body.classList.contains('menu-hidden')).toBe(false);
-            menuIcon.click();
-           expect(document.body.classList.contains('menu-hidden')).toBe(true);
+              // trigger first click to display menu
+      $('.menu-icon-link').trigger('click');
 
-        });
+      //checks if menu is visible
+      expect('body').not.toHaveClass('menu-hidden');
+
+      // triggers second click to hide menu
+      $('.menu-icon-link').trigger('click');
+
+      // checks if menu is hidden
+      expect('body').toHaveClass('menu-hidden');
+    });
 
     });
   
