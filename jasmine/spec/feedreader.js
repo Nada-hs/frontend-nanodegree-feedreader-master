@@ -88,7 +88,6 @@ $(function() {
             menuIcon.click();
             expect(document.body.classList.contains('menu-hidden')).toBe(true);*/
 
-        });
 
     });
   
