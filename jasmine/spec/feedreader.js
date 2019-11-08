@@ -71,10 +71,11 @@ $(function() {
           */
 
          it('Toggle when menu icon clicked',function(){
-            $('.menu-icon-link').trigger('click');
-            expect($('.menu-hidden').is(':visible')).toBe(false);
-            $('.menu-icon-link').trigger('click');
-            expect($('.menu-hidden').is(':visible')).toBe(true);
+            let menuIcon = document.querySelector('a.menu-icon-link');
+            menuIcon.click();
+            expect(document.body.classList.contains('menu-hidden')).toBe(false);
+            menuIcon.click();
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
 
         });
 
