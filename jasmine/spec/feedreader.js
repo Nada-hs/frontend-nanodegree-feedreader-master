@@ -53,34 +53,42 @@ $(function() {
    TODO:/* Write a new test suite named "The menu" */
 
     describe('The menu', function() {
-        /* TODO: Write a test that ensures the menu element is
+
+        TODO: /* Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        it('is hidden', function() {
-            expect($('body').hasClass('menu-hidden')).toBe(true);
-            // ref: https://api.jquery.com/hasclass/
+        
+        it('Hidden by default',function(){
+            let Hidden = document.body.classList.contains('menu-hidden');
+            expect (Hidden).toBe(true);
         });
 
-         /* TODO: Write a test that ensures the menu changes
+
+        TODO: /*  Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-         it('toggles visibility on click', function() {
-            $('a.menu-icon-link').trigger('click'); // show menu
-            expect($('body').hasClass('menu-hidden')).toBe(false);
-            $('a.menu-icon-link').trigger('click'); // hide menu again
-            expect($('body').hasClass('menu-hidden')).toBe(true);
-         });
+    
+            it('Toggle when menu icon clicked',function(){
+            let menuIcon = document.querySelector('a.menu-icon-link');
+            menuIcon.click();
+            expect(document.body.classList.contains('menu-hidden')).toBe(false);
+            menuIcon.click();
+            expect(document.body.classList.contains('menu-hidden')).toBe(true);
+
+        });
+
     });
   
 
          TODO: /*  Write a new test suite named "Initial Entries" */
+
+         
     describe('The menu', function() {
 
-    
          TODO: /*Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
