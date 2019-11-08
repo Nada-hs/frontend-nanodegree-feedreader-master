@@ -71,6 +71,7 @@ $(function() {
           */
 
          it('Toggle when menu icon clicked',function(){
+             
             let menuIcon = document.querySelector('a.menu-icon-link');
             menuIcon.click();
             expect(document.body.classList.contains('menu-hidden')).toBe(false);
@@ -98,36 +99,41 @@ $(function() {
                 loadFeed(1,done);
             }, 100);
           });
-it('Entry elment in the feed container',function(){
- let feed = document.querySelector('feed');
- let entries= document.querySelectorAll('article.entry');
-  expect($('.feed .entries').length).not.toBeGreaterThan(0);
+it('Entry elment in the feed container',function(done){
+	let feedLength  =document.querySelector('.feed').querySelectorAll('.entry');
+	 expect(feedLength.length).toBeGreaterThan(0);
+	done();
 });
 
 });
+
      TODO:/* Write a new test suite named "New Feed Selection" */
-    describe('New Feed Selection', function() {
+     describe('New Feed Selection', function() {
+     	
+         var oldFeed;
+         var newFeed;
 
-        let oldFeed, newFeed;
-          beforeEach(function(done){
-            loadFeed(2, function(){
-                oldFeed =document.querySelector('div.feed').innerHTML;
-            loadFeed(1, function(){
-                newFeed =document.querySelector('div.feed').innerHTML;
-            done();
-            });
-        });
-    });
- 
-   
-    TODO: /*Write a test that ensures when a new feed is loaded
+         TODO:/* Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-  it('New feed is loaded', function(){
-    expect(oldFeed).not.toEqual(newFeed);
+        beforeEach(function(done) {
+            loadFeed(0, function() { //loads the feed at position 1.
+                 oldFeed= $('.feed').html();
+             
+                done();
+            });
+        });
+
+        it('New feed is loaded', function(done) {
+            loadFeed(1, function() {
+                newFeed = $('.feed').html();
+                expect(newFeed).not.toEqual(oldFeed);
+                done();
+        });
       
   });
+
 });
 
 }());
