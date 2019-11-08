@@ -21,7 +21,7 @@ $(function() {
         
         });
 
-        /* TODO: Write a test that loops through each feed
+        TODO:/* Write a test that loops through each feed
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
@@ -33,7 +33,7 @@ $(function() {
             }
         });
 
-         /* TODO: Write a test that loops through each feed
+          TODO: /*Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
@@ -50,11 +50,11 @@ $(function() {
     });
 
 
-  /* TODO: Write a new test suite named "The menu" */
+   TODO:/* Write a new test suite named "The menu" */
 
     describe('The menu', function() {
 
-        /* TODO: Write a test that ensures the menu element is
+        TODO: /* Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
@@ -64,7 +64,7 @@ $(function() {
             let Hidden = document.body.classList.contains('menu-hidden');
             expect (Hidden).toBe(true);
         });
-         /* TODO: Write a test that ensures the menu changes
+        TODO: /*  Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
@@ -82,11 +82,11 @@ $(function() {
     });
   
 
-    /* TODO: Write a new test suite named "Initial Entries" */
+         TODO: /*  Write a new test suite named "Initial Entries" */
     describe('The menu', function() {
 
     
-        /* TODO: Write a test that ensures when the loadFeed
+         TODO: /*Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
@@ -99,12 +99,13 @@ $(function() {
             }, 100);
           });
 it('Entry elment in the feed container',function(){
- let entries= document.querySelectorAll('article.entry')
-expect(entries.length).not.toBe(0);
+ let feed = document.querySelector('feed');
+ let entries= document.querySelectorAll('article.entry');
+  expect($('.feed .entries').length).not.toBeGreaterThan(0);
 });
 
 });
-    /* TODO: Write a new test suite named "New Feed Selection" */
+     TODO:/* Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
 
         let oldFeed, newFeed;
@@ -119,7 +120,7 @@ expect(entries.length).not.toBe(0);
     });
  
    
-   /* TODO: Write a test that ensures when a new feed is loaded
+    TODO: /*Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
